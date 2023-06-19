@@ -21,7 +21,16 @@ public class ComplexNumberCalculator implements CalculatorInterface{
 
     public ComplexNumberCalculator multi(ComplexNumber num2) {
         double a = num1.getA()* num2.getA() - num1.getB()* num2.getB();
-        double b = num1.getA()* num2.getA() - num1.getB()* num2.getB();
+        double b = num1.getA()* num2.getA() + num1.getB()* num2.getB();
+        num1 = new ComplexNumber(a,b);
+        return this;
+    }
+
+    public ComplexNumberCalculator div(ComplexNumber num2) {
+        double a = (num1.getA()* num2.getA() + num1.getB()* num2.getB())/
+                (num2.getA()* num2.getA() + num2.getB()* num2.getB());
+        double b = (num1.getB()* num2.getA() - num1.getA()* num2.getB())/
+                (num2.getA()* num2.getA() + num2.getB()* num2.getB());
         num1 = new ComplexNumber(a,b);
         return this;
     }
