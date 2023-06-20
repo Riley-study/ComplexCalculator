@@ -5,7 +5,7 @@ import package1.calculator.*;
 import java.util.Scanner;
 
 public class ViewConsole {
-    private CalculatorFactoryInterface calculatorFactory;
+    private final CalculatorFactoryInterface calculatorFactory;
 
     public ViewConsole(CalculatorFactoryInterface calculatorFactory) {
         this.calculatorFactory = calculatorFactory;
@@ -14,8 +14,7 @@ public class ViewConsole {
     public void start(){
         while (true){
             ComplexNumber firstComplexNum = promptComplexNumber("Первое комплексное число ");
-            CalculatorFactory complexCalculator = new CalculatorFactory();
-            CalculatorInterface complexNumberCalculator = complexCalculator.create(firstComplexNum);
+            CalculatorInterface complexNumberCalculator = calculatorFactory.create(firstComplexNum);
             while (true){
                 String userChoice = prompt("Введите действие (+, -, /, *, =): ");
                 if(userChoice.equalsIgnoreCase("+")){

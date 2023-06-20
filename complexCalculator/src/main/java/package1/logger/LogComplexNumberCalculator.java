@@ -18,7 +18,6 @@ public class LogComplexNumberCalculator implements CalculatorInterface {
 
     @Override
     public ComplexNumberCalculator sum(ComplexNumber num2) {
-        System.out.println("ПОЧЕМУ НЕ РАБОТАЕТ??");
         logger.log(String.format("Находим сумму с %s", num2));
         return calculator.sum(num2);
     }
@@ -44,7 +43,7 @@ public class LogComplexNumberCalculator implements CalculatorInterface {
     @Override
     public ComplexNumber getResult() {
         ComplexNumber result = calculator.getResult();
-        logger.log(String.format("Результат555:  %s", result));
+        logger.log(String.format("Результат:  %s", result));
         return result;
     }
 }
