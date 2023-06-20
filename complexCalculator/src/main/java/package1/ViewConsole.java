@@ -1,9 +1,6 @@
 package package1;
 
-import package1.CalculatorFactory;
-import package1.CalculatorFactoryInterface;
-import package1.ComplexNumber;
-import package1.ComplexNumberCalculator;
+import package1.calculator.*;
 
 import java.util.Scanner;
 
@@ -18,7 +15,7 @@ public class ViewConsole {
         while (true){
             ComplexNumber firstComplexNum = promptComplexNumber("Первое комплексное число ");
             CalculatorFactory complexCalculator = new CalculatorFactory();
-            ComplexNumberCalculator complexNumberCalculator = complexCalculator.create(firstComplexNum);
+            CalculatorInterface complexNumberCalculator = complexCalculator.create(firstComplexNum);
             while (true){
                 String userChoice = prompt("Введите действие (+, -, /, *, =): ");
                 if(userChoice.equalsIgnoreCase("+")){

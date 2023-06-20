@@ -1,4 +1,4 @@
-package package1;
+package package1.calculator;
 
 public class ComplexNumberCalculator implements CalculatorInterface {
     private ComplexNumber num1;

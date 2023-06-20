@@ -1,4 +1,4 @@
-package package1;
+package package1.calculator;
 
 public class ComplexNumber {
     private double a;

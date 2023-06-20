@@ -1,4 +1,4 @@
-package package1;
+package package1.calculator;
 
 public interface CalculatorInterface {
     ComplexNumberCalculator sum(ComplexNumber num2);
